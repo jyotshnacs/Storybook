@@ -1,53 +1,20 @@
-import { Button } from "./Button";
+import { Button } from "../components/Button";
+import { action } from "@storybook/addon-actions";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/Button",
+  title: "Button",
   component: Button,
-  parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "centered",
-  },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
-  tags: ["autodocs"],
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  // parameters: {
+  //   // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
+  //   layout: "centered",
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary = {
-  args: {
-    primary: true,
-    label: "Button",
-  },
-};
+export const Text = () => (
+  <Button onClick={action("clicked")}>Hello Button</Button>
+);
 
-export const Secondary = {
-  args: {
-    label: "Button",
-  },
-};
-
-export const Large = {
-  args: {
-    size: "large",
-    label: "Button",
-  },
-};
-
-export const Small = {
-  args: {
-    size: "small",
-    label: "Button",
-  },
-};
-
-export const Warning = {
-  args: {
-    primary: true,
-    label: "Delete now",
-    backgroundColor: "red",
-  },
-};
+//  export const Emoji = () =>  (
+//   <Button onClick={action('clicked')} />
+//    <span role="img" aria-label="so cool" />
+//  );
