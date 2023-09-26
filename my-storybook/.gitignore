@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# storybook dev -p 6006
+# start-storybook -p 6006  -s public
+# storybook build
+# build-storybook -s public
